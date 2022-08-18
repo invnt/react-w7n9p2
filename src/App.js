@@ -227,7 +227,7 @@ export default function App() {
                 </select>
               </div>
             </div>
-            <a href="#" class="btn btn-primary">
+            <a href="#" class="btn btn-primary" onClick={handleClick}>
               Go somewhere
             </a>
           </div>

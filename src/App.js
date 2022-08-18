@@ -1,6 +1,18 @@
 import React from 'react';
 import './style.css';
 
+const handleClick = (e) => {
+  e.preventDefault();
+  var name = document.getElementById('name').value;
+  var surname = document.getElementById('surname').value;
+  var idnumber = document.getElementById('idnumber').value;
+  var cellnumber = document.getElementById('cellnumber').value;
+  var select = document.getElementById('marital');
+  var marital = select.options[select.selectedIndex].value;
+
+  alert(name + surname + idnumber + cellnumber + marital);
+};
+
 export default function App() {
   return (
     <div>
@@ -70,11 +82,15 @@ export default function App() {
             <p class="card-text">Please verify with Client Marital Status.</p>
             <div class="input-group mb-3">
               <div class="mb-3">
-                <select class="form-select" aria-label="Default select example">
+                <select
+                  id="marital"
+                  class="form-select"
+                  aria-label="Default select example"
+                >
                   <option selected>Marital Status</option>
-                  <option value="1">Married</option>
-                  <option value="2">Divorced</option>
-                  <option value="3">Single</option>
+                  <option value="Married">Married</option>
+                  <option value="Divorced">Divorced</option>
+                  <option value="Single">Single</option>
                 </select>
               </div>
             </div>

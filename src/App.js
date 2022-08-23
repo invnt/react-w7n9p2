@@ -5,23 +5,100 @@ const handleClick = (e) => {
   e.preventDefault();
   var name = document.getElementById('name').value;
   var surname = document.getElementById('surname').value;
-  var idnumber = document.getElementById('idnumber').value;
+  var id = document.getElementById('idnumber').value;
   var cellnumber = document.getElementById('cellnumber').value;
   var select = document.getElementById('marital');
   var marital = select.options[select.selectedIndex].value;
 
-  alert(name + surname + idnumber + cellnumber + marital);
+  var myHeaders = new Headers();
+  myHeaders.append('Content-Type', 'application/json');
+
+  var raw = JSON.stringify({
+    id: id,
+    name: name,
+    surname: surname,
+    cellnumber: cellnumber,
+    marital: marital,
+    dependants: '1',
+    incomesource: 'Business',
+    occupation: 'Softaware Developer',
+    province: 'Gauteng',
+    city: 'Johannesburg',
+    association: 'NON',
+    salarybracket: '>45000',
+    currentinsurance: 'Life',
+    currentinsurer: 'Discovery',
+    smoker: 'No',
+  });
+
+  var requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow',
+  };
+
+  fetch('https://logan007005.pythonanywhere.com/Leads', requestOptions)
+    .then((response) => response.text())
+    .then((result) => console.log(result))
+    .catch((error) => console.log('error', error));
 };
 
 export default function App() {
   return (
     <div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            P3 Leads System
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Features
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Pricing
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link disabled"
+                  href="#"
+                  tabindex="-1"
+                  aria-disabled="true"
+                >
+                  Disabled
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
       <div class="container">
         <br></br>
         <div class="card">
-          <div class="card-header">LIBERTY</div>
           <div class="card-body">
-            <h5 class="card-title">Clients Details</h5>
+            <h5 class="card-title">LIBERTY LEAD</h5>
             <p class="card-text">
               Please verify with Client as you populate these fields.
             </p>

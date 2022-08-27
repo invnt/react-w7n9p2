@@ -35,7 +35,7 @@ export default function App() {
       <div class="container">
         <br></br>
         <form class="row g-3 was-validated">
-          <div class="col-md-4">
+          <div class="col-md-3">
             <label for="validationCustom01" class="form-label">
               First name
             </label>
@@ -48,7 +48,7 @@ export default function App() {
             <div class="invalid-feedback">Please provide First name</div>
             <div class="valid-feedback">Looks good!</div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <label for="validationCustom02" class="form-label">
               Last name
             </label>
@@ -61,7 +61,7 @@ export default function App() {
             <div class="invalid-feedback">Please provide Last name</div>
             <div class="valid-feedback">Looks good!</div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <label for="validationCustomUsername" class="form-label">
               Idnumber
             </label>
@@ -78,17 +78,37 @@ export default function App() {
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <label for="validationCustom03" class="form-label">
+          <div class="col-md-3">
+            <label for="validationCustomUsername" class="form-label">
+              Cellnumber
+            </label>
+            <div class="input-group has-validation">
+              <input
+                type="text"
+                class="form-control"
+                id="validationCustomUsername"
+                aria-describedby="inputGroupPrepend"
+                required
+              ></input>
+              <div class="invalid-feedback">
+                Please provide valid SA Cellnumber.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">
               City
             </label>
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom03"
-              required
-            ></input>
-            <div class="invalid-feedback">Please provide a valid city.</div>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="">
+                Choose...
+              </option>
+              <option>Bellville</option>
+              <option>Cape Town</option>
+              <option>Constantia</option>
+              <option>George</option>
+            </select>
+            <div class="invalid-feedback">Please select a valid City.</div>
           </div>
           <div class="col-md-3">
             <label for="validationCustom04" class="form-label">
@@ -107,7 +127,7 @@ export default function App() {
           </div>
           <div class="col-md-3">
             <label for="validationCustom05" class="form-label">
-              Zip
+              Postal Code
             </label>
             <input
               type="text"
@@ -115,9 +135,147 @@ export default function App() {
               id="validationCustom05"
               required
             ></input>
-            <div class="invalid-feedback">Please provide a valid zip.</div>
+            <div class="invalid-feedback">
+              Please provide a valid Postal Code.
+            </div>
           </div>
-
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">
+              Marital Status
+            </label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="">
+                Choose...
+              </option>
+              <option>Married</option>
+              <option>Single</option>
+              <option>Divorced</option>
+            </select>
+            <div class="invalid-feedback">Please select Marital Status.</div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">
+              Number of Kids
+            </label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="">
+                Choose...
+              </option>
+              <option>Zero</option>
+              <option>One</option>
+              <option>Two</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select the number off kids.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">
+              Income Source
+            </label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="">
+                Choose...
+              </option>
+              <option>Business</option>
+              <option>Employed</option>
+            </select>
+            <div class="invalid-feedback">
+              Please Select the clients Income Source
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">
+              Type of Job
+            </label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="">
+                Choose...
+              </option>
+              <option>Business</option>
+              <option>Employed</option>
+            </select>
+            <div class="invalid-feedback">Please Select the clients Job</div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">
+              Proffesional Association
+            </label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="">
+                Choose...
+              </option>
+              <option>Non</option>
+              <option></option>
+            </select>
+            <div class="invalid-feedback">
+              Please Select the clients Proffesional Association
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">
+              Income
+            </label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="">
+                Choose...
+              </option>
+              <option>Less than R45000</option>
+              <option>More than R45000</option>
+            </select>
+            <div class="invalid-feedback">
+              Please Select the clients Income Amount
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">
+              Current Insurance
+            </label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="">
+                Choose...
+              </option>
+              <option>Life Cover</option>
+              <option>Disablity</option>
+            </select>
+            <div class="invalid-feedback">
+              Please Select the clients Current Insurance Cover
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">
+              Insurance Company
+            </label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="">
+                Choose...
+              </option>
+              <option>Non</option>
+              <option>Other</option>
+              <option>Discovery</option>
+              <option>Old Mutual</option>
+              <option>Sanlam</option>
+              <option>Santam</option>
+            </select>
+            <div class="invalid-feedback">
+              Please Select the clients Current Insurance Company
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">
+              Smoker
+            </label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="">
+                Choose...
+              </option>
+              <option>Non Smoker</option>
+              <option>Smoker</option>
+            </select>
+            <div class="invalid-feedback">
+              Please Select if the Client is a Smoker or not
+            </div>
+          </div>
           <div class="col-12">
             <div class="form-check">
               <input

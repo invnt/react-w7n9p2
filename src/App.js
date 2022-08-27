@@ -64,9 +64,6 @@ export default function App() {
               Username
             </label>
             <div class="input-group has-validation">
-              <span class="input-group-text" id="inputGroupPrepend">
-                @
-              </span>
               <input
                 type="text"
                 class="form-control"

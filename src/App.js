@@ -45,6 +45,7 @@ export default function App() {
               id="validationCustom01"
               required
             ></input>
+            <div class="invalid-feedback">Please provide First name</div>
             <div class="valid-feedback">Looks good!</div>
           </div>
           <div class="col-md-4">
@@ -57,11 +58,12 @@ export default function App() {
               id="validationCustom02"
               required
             ></input>
+            <div class="invalid-feedback">Please provide Last name</div>
             <div class="valid-feedback">Looks good!</div>
           </div>
           <div class="col-md-4">
             <label for="validationCustomUsername" class="form-label">
-              Username
+              Idnumber
             </label>
             <div class="input-group has-validation">
               <input
@@ -71,7 +73,9 @@ export default function App() {
                 aria-describedby="inputGroupPrepend"
                 required
               ></input>
-              <div class="invalid-feedback">Please choose a username.</div>
+              <div class="invalid-feedback">
+                Please provide valid SA idnumber.
+              </div>
             </div>
           </div>
           <div class="col-md-6">
@@ -88,13 +92,16 @@ export default function App() {
           </div>
           <div class="col-md-3">
             <label for="validationCustom04" class="form-label">
-              State
+              Province
             </label>
             <select class="form-select" id="validationCustom04" required>
               <option selected disabled value="">
                 Choose...
               </option>
-              <option>...</option>
+              <option>Gauteng</option>
+              <option>Kwazulu Natal</option>
+              <option>Free State</option>
+              <option>Western Cape</option>
             </select>
             <div class="invalid-feedback">Please select a valid state.</div>
           </div>
@@ -110,6 +117,7 @@ export default function App() {
             ></input>
             <div class="invalid-feedback">Please provide a valid zip.</div>
           </div>
+
           <div class="col-12">
             <div class="form-check">
               <input

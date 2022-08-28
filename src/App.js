@@ -35,7 +35,7 @@ export default function App() {
       <div class="container">
         <br></br>
         <form class="row g-3 was-validated">
-          <div class="col-md-3">
+          <div class="col-md-4">
             <label for="validationCustom01" class="form-label">
               First name
             </label>
@@ -48,7 +48,7 @@ export default function App() {
             <div class="invalid-feedback">Please provide First name</div>
             <div class="valid-feedback">Looks good!</div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-4">
             <label for="validationCustom02" class="form-label">
               Last name
             </label>
@@ -61,7 +61,7 @@ export default function App() {
             <div class="invalid-feedback">Please provide Last name</div>
             <div class="valid-feedback">Looks good!</div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-4">
             <label for="validationCustomUsername" class="form-label">
               Idnumber
             </label>
@@ -78,6 +78,7 @@ export default function App() {
               </div>
             </div>
           </div>
+
           <div class="col-md-3">
             <label for="validationCustomUsername" class="form-label">
               Cellnumber
@@ -95,6 +96,7 @@ export default function App() {
               </div>
             </div>
           </div>
+          <hr></hr>
           <div class="col-md-3">
             <label for="validationCustom04" class="form-label">
               City
@@ -107,6 +109,12 @@ export default function App() {
               <option>Cape Town</option>
               <option>Constantia</option>
               <option>George</option>
+              <option>Hopefield</option>
+              <option>Oudtshoorn</option>
+              <option>Paarl</option>
+              <option>Simon’s Town</option>
+              
+
             </select>
             <div class="invalid-feedback">Please select a valid City.</div>
           </div>
@@ -139,6 +147,7 @@ export default function App() {
               Please provide a valid Postal Code.
             </div>
           </div>
+          <hr></hr>
           <div class="col-md-3">
             <label for="validationCustom04" class="form-label">
               Marital Status
@@ -184,6 +193,7 @@ export default function App() {
               Please Select the clients Income Source
             </div>
           </div>
+          <hr></hr>
           <div class="col-md-3">
             <label for="validationCustom04" class="form-label">
               Type of Job
@@ -242,6 +252,7 @@ export default function App() {
               Please Select the clients Current Insurance Cover
             </div>
           </div>
+          <hr></hr>
           <div class="col-md-3">
             <label for="validationCustom04" class="form-label">
               Insurance Company
@@ -276,6 +287,7 @@ export default function App() {
               Please Select if the Client is a Smoker or not
             </div>
           </div>
+          <hr></hr>
           <div class="col-12">
             <div class="form-check">
               <input
@@ -298,6 +310,7 @@ export default function App() {
               Submit form
             </button>
           </div>
+          <hr></hr>
         </form>
       </div>
     </div>
